@@ -6,7 +6,7 @@ tableextension 50101 ADWPurchaseHeader extends "Purchase Header"
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
-            CalcFormula = Sum("Purchase Line"."Line Amount (LCY)" WHERE("Document Type" = FIELD("Document Type"), "Document No." = FIELD("No.")));
+            CalcFormula = Sum("Purchase Line".LineAmountLCY WHERE("Document Type" = FIELD("Document Type"), "Document No." = FIELD("No.")));
             Caption = 'Amount (LCY)';
             Editable = false;
             FieldClass = FlowField;
