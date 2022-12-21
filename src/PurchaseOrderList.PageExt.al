@@ -2,9 +2,9 @@ pageextension 50100 ADWPurchaseOrderList extends "Purchase Order List"
 {
     layout
     {
-        addlast(content)
+        addlast(Control1)
         {
-            field("Outstanding Amount (LCY)"; rec."Outstanding Amount (LCY)")
+            field("Amount (LCY)"; rec."Amount (LCY)")
             {
                 ApplicationArea = all;
             }
